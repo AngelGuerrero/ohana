@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "nvm use 22.17.1 && pnpm i && pnpm dev",
+      "name": "Linux pnpm dev",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "pnpm dev",
+      "name": "Windows pnpm dev",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
