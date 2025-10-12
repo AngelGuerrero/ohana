@@ -1,0 +1,149 @@
+{
+  "label": "Menú de Precios",
+  "items": [
+    {
+      "id": "crepas",
+      "slug": "crepas",
+      "title": "Crepas",
+      "active": true,
+      "description": "Deliciosas crepas dulces.",
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 75,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "mini_hotcakes",
+      "slug": "mini_hotcakes",
+      "title": "Mini Hotcakes",
+      "active": true,
+      "description": "Mini Hotcakes por paquetes.",
+      "variants": [
+        {
+          "id": "paquete_de_8",
+          "title": "Paquete de 8",
+          "price": 55,
+          "active": true
+        },
+        {
+          "id": "paquete_de_16",
+          "title": "Paquete de 16",
+          "price": 75,
+          "active": true
+        },
+        {
+          "id": "paquete_de_24",
+          "title": "Paquete de 24",
+          "price": 95,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "topping_extra",
+      "slug": "topping_extra",
+      "title": "Topping Extra",
+      "active": true,
+      "description": "Costo adicional por cada topping extra.",
+      "variants": [
+        {
+          "id": "porcion",
+          "title": "Porción",
+          "price": 10,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "frapes",
+      "slug": "frapes",
+      "title": "Frapés",
+      "active": true,
+      "description": "Bebidas frías a base de hielo y saborizantes.",
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 60,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "gomiboing",
+      "slug": "gomiboing",
+      "title": "Gomiboing",
+      "active": true,
+      "description": "Postre de gomas.",
+      "variants": [
+        {
+          "id": "pequeno",
+          "title": "Pequeño",
+          "price": 30,
+          "active": true
+        },
+        {
+          "id": "grande",
+          "title": "Grande",
+          "price": 40,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "lechitas_preparadas",
+      "slug": "lechitas_preparadas",
+      "title": "Lechitas Preparadas",
+      "active": true,
+      "description": "Leche preparada con sabores.",
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 25,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "fresas_con_crema",
+      "slug": "fresas_con_crema",
+      "title": "Fresas con Crema",
+      "active": true,
+      "description": "Fresas frescas con nuestra crema especial.",
+      "variants": [
+        {
+          "id": "vaso_pequeno",
+          "title": "Vaso pequeño",
+          "price": 35,
+          "active": true
+        },
+        {
+          "id": "vaso_grande",
+          "title": "Vaso grande",
+          "price": 45,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "waffles",
+      "slug": "waffles",
+      "title": "Waffles",
+      "active": true,
+      "description": "Waffles recién hechos con el topping de tu elección.",
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 65,
+          "active": true
+        }
+      ]
+    }
+  ]
+}

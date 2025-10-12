@@ -10,7 +10,12 @@ export default {
     ,
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'brand-gold': '#FFD700',
+        'brand-dark': '#1a1a1a'
+      }
+    }
   },
   plugins: []
 }
