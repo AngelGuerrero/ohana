@@ -1,3 +1,28 @@
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import menuData from '~/data/menu.json'
+
+const menuItems = ref(menuData.items)
+
+const categories = computed(() => {
+  const allCategories = menuItems.value.map(item => item.title)
+  return [...new Set(allCategories)]
+})
+
+const selectedCategory = ref('all')
+
+const selectCategory = (category: string) => {
+  selectedCategory.value = category
+}
+
+const filteredItems = computed(() => {
+  if (selectedCategory.value === 'all') {
+    return menuItems.value
+  }
+  return menuItems.value.filter(item => item.title === selectedCategory.value)
+})
+</script>
+
 <template>
   <div id="menu" class="py-24 bg-black">
     <div class="container mx-auto px-4">
