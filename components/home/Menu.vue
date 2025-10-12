@@ -44,7 +44,7 @@
           :key="item.id"
           class="transform transition-all duration-300 hover:-translate-y-2"
         >
-          <CardComponent
+          <CommonCard
             class="bg-gray-900 border border-gray-800 h-full flex flex-col hover:border-brand-gold/50 transition-colors duration-300 rounded-lg"
           >
             <div class="p-6 flex-grow">
@@ -61,35 +61,9 @@
                 <span class="font-bold text-white">${{ variant.price }}</span>
               </div>
             </div>
-          </CardComponent>
+          </CommonCard>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref, computed } from 'vue'
-import menuData from '~/data/menu.json'
-import CardComponent from '~/components/Common/CardComponent.vue'
-
-const menuItems = ref(menuData.items)
-
-const categories = computed(() => {
-  const allCategories = menuItems.value.map(item => item.title)
-  return [...new Set(allCategories)]
-})
-
-const selectedCategory = ref('all')
-
-const selectCategory = (category: string) => {
-  selectedCategory.value = category
-}
-
-const filteredItems = computed(() => {
-  if (selectedCategory.value === 'all') {
-    return menuItems.value
-  }
-  return menuItems.value.filter(item => item.title === selectedCategory.value)
-})
-</script>

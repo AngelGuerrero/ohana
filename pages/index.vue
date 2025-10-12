@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import MenuComponent from '~/components/home/MenuComponent.vue'
-
 useHead({
   title: 'Ohana - Postres, Frappés & Café'
 })
@@ -29,8 +27,6 @@ useHead({
     </div>
 
     <!-- Menu Section -->
-    <MenuComponent />
+    <HomeMenu />
   </div>
 </template>
-
-
