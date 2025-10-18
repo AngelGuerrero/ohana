@@ -7,6 +7,8 @@
       "title": "Crepas",
       "active": true,
       "description": "Deliciosas crepas dulces.",
+      "flavors": ["Nutella", "Mermelada", "Miel", "Filadelfia"],
+      "fruits": ["Fresas", "Durazno", "Plátano"],
       "variants": [
         {
           "id": "regular",
@@ -22,6 +24,8 @@
       "title": "Mini Hotcakes",
       "active": true,
       "description": "Mini Hotcakes por paquetes.",
+      "flavors": ["Clásico con miel", "Con chocolate", "Con frutas"],
+      "fruits": ["Fresas", "Durazno", "Plátano"],
       "variants": [
         {
           "id": "paquete_de_8",
@@ -49,6 +53,13 @@
       "title": "Topping Extra",
       "active": true,
       "description": "Costo adicional por cada topping extra.",
+      "flavors": [
+        "Chocolate derretido",
+        "Crema batida",
+        "Nueces picadas",
+        "Sirope de diferentes sabores",
+        "Frutas frescas"
+      ],
       "variants": [
         {
           "id": "porcion",
@@ -64,6 +75,7 @@
       "title": "Frapés",
       "active": true,
       "description": "Bebidas frías a base de hielo y saborizantes.",
+      "flavors": ["Café", "Vainilla", "Chocolate", "Fresa", "Mango"],
       "variants": [
         {
           "id": "regular",
@@ -79,6 +91,7 @@
       "title": "Gomiboing",
       "active": true,
       "description": "Postre de gomas.",
+      "flavors": ["Surtido de frutas", "Tropical", "Ácido", "Dulce"],
       "variants": [
         {
           "id": "pequeno",
@@ -98,8 +111,9 @@
       "id": "lechitas_preparadas",
       "slug": "lechitas_preparadas",
       "title": "Lechitas Preparadas",
-      "active": true,
+      "active": false,
       "description": "Leche preparada con sabores.",
+      "flavors": ["Vainilla", "Chocolate", "Fresa"],
       "variants": [
         {
           "id": "regular",
@@ -115,6 +129,7 @@
       "title": "Fresas con Crema",
       "active": true,
       "description": "Fresas frescas con nuestra crema especial.",
+      "flavors": ["Clásicas", "Con chocolate", "Con nueces"],
       "variants": [
         {
           "id": "vaso_pequeno",
@@ -136,6 +151,8 @@
       "title": "Waffles",
       "active": true,
       "description": "Waffles recién hechos con el topping de tu elección.",
+      "flavors": ["Clásico", "Con frutas", "Con chocolate", "Con miel"],
+      "fruits": ["Fresas", "Durazno", "Plátano"],
       "variants": [
         {
           "id": "regular",

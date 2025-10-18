@@ -1,6 +1,6 @@
 export interface Category {
-  name: string
-  generalCategory: string
-  description?: string
-  food: any[]
+  name: string;
+  generalCategory: string;
+  description?: string;
+  food: any[];
 }

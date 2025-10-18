@@ -1,6 +1,6 @@
-# Proyecto Base Nuxt 3
+# Ohana - Postres, Frappés & Café
 
-Aplicación base Nuxt 3 lista para iniciar tu próximo proyecto.
+Aplicación web para mostrar el menú digital de un restaurante especializado en postres, frappés y café.
 
 ## Tecnologías Incluidas
 
@@ -42,13 +42,26 @@ Previsualiza la build de producción localmente:
 pnpm run preview
 ```
 
+## Características Especiales
+
+### Menú Digital Interactivo
+- **Página dedicada**: `/menu` - Menú digital completo con diseño elegante
+- **Fondo animado**: Partículas flotantes con efectos visuales sutiles
+- **Efecto vidrio esmerilado**: Tarjetas con transparencia y desenfoque
+- **Responsive design**: Optimizado para móviles y escritorio
+- **Animaciones sutiles**: Transiciones suaves al hacer hover
+- **Organización clara**: Productos agrupados con precios destacados
+
 ## Estructura del Proyecto
 
 ```
 ├── assets/          # Archivos CSS y recursos estáticos
 ├── components/      # Componentes Vue reutilizables
+├── data/            # Datos del menú (JSON)
 ├── layouts/         # Layouts de la aplicación
 ├── pages/           # Rutas de la aplicación
+│   ├── index.vue    # Página principal
+│   └── menu.vue     # Página del menú digital
 ├── public/          # Archivos públicos estáticos
 ├── server/          # API y tipos del servidor
 ├── stores/          # Stores de Pinia

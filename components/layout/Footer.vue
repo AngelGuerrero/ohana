@@ -1,7 +1,5 @@
 <template>
-  <footer
-    class="border-t border-white/10 bg-black/30 py-8 backdrop-blur-lg"
-  >
+  <footer class="border-t border-white/10 bg-black/30 py-8 backdrop-blur-lg">
     <div
       class="container mx-auto flex flex-col items-center gap-4 px-6 text-center text-gray-300"
     >

@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {}
-    }
+      autoprefixer: {},
+    },
   },
 
   app: {
@@ -16,25 +16,30 @@ export default defineNuxtConfig({
       title: 'Ohana - Postres, Frappés & Café',
       titleTemplate: '%s',
       htmlAttrs: {
-        lang: 'es'
+        lang: 'es',
       },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Ohana - Endulza tus momentos con nuestros postres artesanales, frappés, cafés premium y crepas deliciosas.'
+          content:
+            'Ohana - Endulza tus momentos con nuestros postres artesanales, frappés, cafés premium y crepas deliciosas.',
         },
         {
           name: 'keywords',
-          content: 'ohana, postres, frappés, café, crepas, dulces, bebidas'
-        }
+          content: 'ohana, postres, frappés, café, crepas, dulces, bebidas',
+        },
       ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
-    }
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
   },
 
-  modules: ['@nuxt/icon', '@pinia/nuxt', '@nuxt/fonts', 'nuxt-lodash', '@nuxt/image']
-})
+  modules: [
+    '@nuxt/icon',
+    '@pinia/nuxt',
+    '@nuxt/fonts',
+    'nuxt-lodash',
+    '@nuxt/image',
+  ],
+});

@@ -13,9 +13,9 @@ export default {
     extend: {
       colors: {
         'brand-gold': '#FFD700',
-        'brand-dark': '#1a1a1a'
-      }
-    }
+        'brand-dark': '#1a1a1a',
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
