@@ -56,8 +56,7 @@
       "title": "Mini Hotcakes",
       "active": true,
       "description": "Mini Hotcakes por paquetes.",
-      "flavors": ["Clásico con miel", "Con chocolate", "Con frutas"],
-      "fruits": ["Fresas", "Durazno", "Plátano"],
+      "flavors": ["Nutella", "Mermelada", "Lechera", "Cajeta", "Filadelfia"],
       "variants": [
         {
           "id": "paquete_de_8",
@@ -85,13 +84,7 @@
       "title": "Topping Extra",
       "active": true,
       "description": "Costo adicional por cada topping extra.",
-      "flavors": [
-        "Chocolate derretido",
-        "Crema batida",
-        "Nueces picadas",
-        "Sirope de diferentes sabores",
-        "Frutas frescas"
-      ],
+      "flavors": ["Nuez", "Chispas de chocolate", "Lunetas", "Chispas de colores"],
       "variants": [
         {
           "id": "porcion",
@@ -107,7 +100,7 @@
       "title": "Gomiboing",
       "active": true,
       "description": "Postre de gomas.",
-      "flavors": ["Surtido de frutas", "Tropical", "Ácido", "Dulce"],
+      "flavors": ["Uva", "Mango", "Fresa"],
       "variants": [
         {
           "id": "pequeno",
@@ -167,8 +160,7 @@
       "title": "Waffles",
       "active": true,
       "description": "Waffles recién hechos con el topping de tu elección.",
-      "flavors": ["Clásico", "Con frutas", "Con chocolate", "Con miel"],
-      "fruits": ["Fresas", "Durazno", "Plátano"],
+      "flavors": ["Nutella", "Cajeta", "Mermelada", "Filadelfia"],
       "variants": [
         {
           "id": "regular",
