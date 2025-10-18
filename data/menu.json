@@ -19,6 +19,38 @@
       ]
     },
     {
+      "id": "croissant_relleno",
+      "slug": "croissant_relleno",
+      "title": "Croissant Relleno",
+      "active": true,
+      "description": "Croissant artesanal recién horneado con deliciosos rellenos.",
+      "flavors": ["Nutella", "Mermelada"],
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 60,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "frapes",
+      "slug": "frapes",
+      "title": "Frapés",
+      "active": true,
+      "description": "Bebidas frías a base de hielo y saborizantes.",
+      "flavors": ["Café", "Mazapán", "Galleta Oreo", "Gansito"],
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 60,
+          "active": true
+        }
+      ]
+    },
+    {
       "id": "mini_hotcakes",
       "slug": "mini_hotcakes",
       "title": "Mini Hotcakes",
@@ -65,22 +97,6 @@
           "id": "porcion",
           "title": "Porción",
           "price": 10,
-          "active": true
-        }
-      ]
-    },
-    {
-      "id": "frapes",
-      "slug": "frapes",
-      "title": "Frapés",
-      "active": true,
-      "description": "Bebidas frías a base de hielo y saborizantes.",
-      "flavors": ["Café", "Vainilla", "Chocolate", "Fresa", "Mango"],
-      "variants": [
-        {
-          "id": "regular",
-          "title": "Regular",
-          "price": 60,
           "active": true
         }
       ]
