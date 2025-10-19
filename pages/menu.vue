@@ -6,14 +6,93 @@
 
 <template>
   <div class="min-h-screen bg-neutral-900">
-    <div class="container mx-auto px-4 py-12 md:py-16">
-      <!-- Hero Section -->
-      <div class="text-center mb-16 md:mb-20 py-16 md:py-20">
-        <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-bold text-amber-400 tracking-tight">
-          {{ menuData.label }}
-        </h1>
+    <div
+      class="relative overflow-hidden bg-gradient-to-br from-lime-200 via-emerald-300 to-teal-400 py-20 md:py-32">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
+              Descubre nuestro delicioso menú
+            </h1>
+            <p
+              class="text-lg md:text-xl text-neutral-800 mb-8 max-w-xl leading-relaxed">
+              Disfruta de nuestras crepas artesanales, croissants recién
+              horneados y bebidas especiales. Cada producto está hecho con los
+              mejores ingredientes para ofrecerte una experiencia única.
+            </p>
+            
+            <div class="!flex flex-wrap items-center gap-4 mb-12">
+              <a
+                href="https://www.facebook.com/profile.php?id=61552845366116"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="!flex items-center gap-2 px-6 py-3 bg-white text-neutral-900 rounded-full font-semibold hover:bg-neutral-100 transition-colors shadow-lg">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Síguenos en Facebook</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8 max-w-lg">
+              <div>
+                <div class="text-neutral-900 text-sm font-semibold mb-1">
+                  Productos
+                </div>
+                <div class="text-4xl font-bold text-neutral-900">
+                  {{ menuItems.length }}+
+                </div>
+              </div>
+              <div>
+                <div class="text-neutral-900 text-sm font-semibold mb-1">
+                  Sabores
+                </div>
+                <div class="text-4xl font-bold text-neutral-900">15+</div>
+              </div>
+              <div>
+                <div class="text-neutral-900 text-sm font-semibold mb-1">
+                  Variantes
+                </div>
+                <div class="text-4xl font-bold text-neutral-900">20+</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative hidden lg:block">
+            <div class="relative">
+              <div
+                class="absolute -top-10 -right-10 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl"></div>
+              <div
+                class="relative bg-white/20 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                <img
+                  src="/img/crepa_1.jpg"
+                  alt="Menú Ohana"
+                  class="rounded-2xl shadow-xl w-full h-auto object-cover" />
+                <div
+                  class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+                  <div class="!flex items-center gap-3">
+                    <img
+                      src="/img/frappe_mazapan.jpg"
+                      alt="Frapé"
+                      class="w-16 h-16 rounded-lg object-cover" />
+                    <div>
+                      <div class="text-sm font-semibold text-neutral-900">
+                        Frapé Mazapán
+                      </div>
+                      <div class="text-xs text-neutral-600">Desde $60</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <div id="menu-items" class="scroll-mt-20"></div>
 
       <!-- Menu Items Grid -->
       <div class="grid gap-8 max-w-6xl mx-auto">
@@ -160,10 +239,23 @@
           <p class="text-2xl md:text-3xl text-amber-400 font-bold mb-3">
             ¡Una experiencia inolvidable te espera!
           </p>
-          <p class="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto">
+          <p class="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto mb-6">
             Cada visita a Ohana es una oportunidad para crear recuerdos dulces
             que perduran
           </p>
+          
+          <div class="!flex justify-center mt-8">
+            <a
+              href="https://www.facebook.com/profile.php?id=61552845366116"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="!flex items-center gap-2 px-6 py-3 bg-amber-400 text-neutral-900 rounded-full font-semibold hover:bg-amber-500 transition-colors shadow-lg">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span>Síguenos en Facebook</span>
+            </a>
+          </div>
         </div>
         <div
           class="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm text-neutral-500 font-medium">
