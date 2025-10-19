@@ -1,10 +1,10 @@
 <template>
   <div class="bg-black font-sans text-gray-200">
-    <LayoutHeader />
+    <LayoutHeaderComponent />
     <main>
       <slot />
     </main>
-    <LayoutFooter />
-    <CommonWhatsappButton />
+    <LayoutFooterComponent />
+    <CommonWhatsappButtonComponent />
   </div>
 </template>

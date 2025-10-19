@@ -1,7 +1,38 @@
 <script setup lang="ts">
-  import menuData from '~/data/menu.json';
+import menuData from '~/data/menu.json';
 
-  const menuItems = menuData.items.filter((item) => item.active);
+const menuItems = menuData.items.filter((item) => item.active);
+
+const getMinPrice = (item: any) => {
+  const activeVariants = item.variants.filter((v: any) => v.active);
+  const prices = activeVariants.map((v: any) => v.price);
+  return Math.min(...prices);
+};
+
+const getItemImage = (itemId: string) => {
+  const imageMap: Record<string, string> = {
+    'crepas': '/img/crepa_1.jpg',
+    'croissant_relleno': '/img/croassant.jpg',
+    'frapes': '/img/frappe_mazapan.jpg',
+  };
+  return imageMap[itemId] || '';
+};
+
+const hasImage = (itemId: string) => {
+  return getItemImage(itemId) !== '';
+};
+
+const hasFlavors = (item: any) => {
+  return item.flavors && item.flavors.length > 0;
+};
+
+const hasFruits = (item: any) => {
+  return item.fruits && item.fruits.length > 0;
+};
+
+const getActiveVariants = (item: any) => {
+  return item.variants.filter((v: any) => v.active);
+};
 </script>
 
 <template>
@@ -94,12 +125,9 @@
     <div class="container mx-auto px-4 py-12 md:py-16">
       <div id="menu-items" class="scroll-mt-20"></div>
 
-      <!-- Menu Items Grid -->
       <div class="grid gap-8 max-w-6xl mx-auto">
         <div v-for="item in menuItems" :key="item.id">
-          <!-- Product Card -->
           <div class="bg-neutral-800 rounded-2xl overflow-hidden">
-            <!-- Header -->
             <div class="px-6 md:px-8 py-6 bg-amber-400">
               <div class="flex justify-between items-start gap-4">
                 <div>
@@ -118,38 +146,20 @@
                     Desde
                   </div>
                   <div class="text-3xl font-bold text-neutral-900">
-                    ${{
-                      Math.min(
-                        ...item.variants
-                          .filter((v) => v.active)
-                          .map((v) => v.price)
-                      )
-                    }}
+                    ${{ getMinPrice(item) }}
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Body with Gallery -->
             <div
               class="grid md:grid-cols-[300px_1fr] lg:grid-cols-[350px_1fr] gap-6 p-6 md:p-8">
-              <!-- Image Gallery -->
               <div
                 class="bg-neutral-700/30 rounded-xl overflow-hidden min-h-[250px] flex items-center justify-center">
                 <img
-                  v-if="item.id === 'crepas'"
-                  src="/img/crepa_1.jpg"
-                  alt="Crepas"
-                  class="w-full h-full object-cover" />
-                <img
-                  v-else-if="item.id === 'croissant_relleno'"
-                  src="/img/croassant.jpg"
-                  alt="Croissant Relleno"
-                  class="w-full h-full object-cover" />
-                <img
-                  v-else-if="item.id === 'frapes'"
-                  src="/img/frappe_mazapan.jpg"
-                  alt="Frapés"
+                  v-if="hasImage(item.id)"
+                  :src="getItemImage(item.id)"
+                  :alt="item.title"
                   class="w-full h-full object-cover" />
                 <div v-else class="text-center p-4">
                   <div
@@ -173,10 +183,8 @@
                 </div>
               </div>
 
-              <!-- Content -->
               <div class="space-y-5">
-                <!-- Flavors -->
-                <div v-if="item.flavors && item.flavors.length > 0">
+                <div v-if="hasFlavors(item)">
                   <h4
                     class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">
                     Sabores disponibles
@@ -191,8 +199,7 @@
                   </div>
                 </div>
 
-                <!-- Fruits -->
-                <div v-if="item.fruits && item.fruits.length > 0">
+                <div v-if="hasFruits(item)">
                   <h4
                     class="text-xs font-bold text-green-400 uppercase tracking-wider mb-3">
                     Frutas disponibles
@@ -207,7 +214,6 @@
                   </div>
                 </div>
 
-                <!-- Variants & Prices -->
                 <div>
                   <h4
                     class="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-3">
@@ -215,15 +221,15 @@
                   </h4>
                   <div class="grid gap-2">
                     <div
-                      v-for="variant in item.variants.filter((v) => v.active)"
+                      v-for="variant in getActiveVariants(item)"
                       :key="variant.id"
                       class="flex justify-between items-center py-3 px-4 bg-neutral-700/50 rounded-lg">
-                      <span class="text-neutral-200 font-medium text-base">{{
-                        variant.title
-                      }}</span>
-                      <span class="text-xl font-bold text-amber-400"
-                        >${{ variant.price }}</span
-                      >
+                      <span class="text-neutral-200 font-medium text-base">
+                        {{ variant.title }}
+                      </span>
+                      <span class="text-xl font-bold text-amber-400">
+                        ${{ variant.price }}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -233,7 +239,6 @@
         </div>
       </div>
 
-      <!-- Footer -->
       <div class="text-center mt-20 pt-16">
         <div class="mb-6">
           <p class="text-2xl md:text-3xl text-amber-400 font-bold mb-3">

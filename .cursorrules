@@ -1,0 +1,153 @@
+# Ohana Project Rules
+
+## Base Technologies
+- Project developed with Nuxt version 3
+- TypeScript as main language
+- Only Tailwind CSS classes allowed
+- Inline styles are prohibited
+
+## Code Language & Documentation
+- **ALL code must be written in ENGLISH** (variables, functions, types, interfaces, etc.)
+- **ALL documentation and comments must be in ENGLISH**
+- Content shown to users (UI text, messages) can be in Spanish
+- Examples:
+  - ✅ GOOD: `const activeItems = items.filter(item => item.active)`
+  - ❌ BAD: `const elementosActivos = items.filter(item => item.active)`
+
+## Comments Policy
+- **AVOID unnecessary comments** - Write self-explanatory code
+- Only add comments when:
+  - Complex algorithms that require explanation
+  - Non-obvious business logic
+  - Workarounds or temporary solutions (with explanation)
+  - Public APIs or libraries documentation
+- ❌ **DON'T comment obvious things:**
+  ```typescript
+  // BAD - Obvious comment
+  const userName = 'John' // Set user name
+  
+  // GOOD - No comment needed, code is self-explanatory
+  const userName = 'John'
+  ```
+- ✅ **DO comment complex logic:**
+  ```typescript
+  // Calculate discount based on tiered pricing structure
+  // First 100 units: 10%, next 100: 15%, above 200: 20%
+  const calculateDiscount = (quantity: number) => {
+    // Complex logic here
+  }
+  ```
+
+## Component Structure
+
+### Naming Convention
+- All components in `components` folder MUST have "Component" suffix
+- Examples: `HeaderComponent.vue`, `CardComponent.vue`, `MenuComponent.vue`
+
+### .vue File Organization
+Components MUST ALWAYS follow this order (include sections even if empty):
+1. `<script setup lang="ts">`
+2. `<template>`
+3. `<style>` (if necessary)
+
+### Script Organization (TypeScript)
+Inside `<script setup lang="ts">` block, ALWAYS maintain this order:
+
+1. **Imports** (external first, then internal)
+2. **Composables** ("use" elements: useRoute, useStore, useNotification, etc.)
+3. **Reactive Variables** (ref, reactive, computed refs, etc.)
+4. **Computed Functions** (computed)
+5. **Methods or Functions** (helper and logic functions)
+6. **HTML-associated Functions** (event handlers)
+   - ALWAYS use "on" prefix for events
+   - Examples: `onSubmit`, `onClick`, `onInput`, `onToggle`
+7. **Watchers** (watch, watchEffect)
+8. **Lifecycle Hooks** (onMounted, onBeforeMount, onUnmounted, etc.)
+9. **defineExpose** (ALWAYS at the end if needed)
+
+Organization example:
+```typescript
+import { ref, computed, watch, onMounted } from 'vue'
+import type { User } from '~/types'
+
+const route = useRoute()
+const notificationStore = useNotification()
+
+const isLoading = ref(false)
+const userData = reactive({ name: '', email: '' })
+
+const isValid = computed(() => userData.name.length > 0)
+
+const validateForm = () => {
+  return userData.name && userData.email
+}
+
+const onSubmit = () => {
+  if (validateForm()) {
+    // logic
+  }
+}
+
+const onClick = (event: Event) => {
+  // logic
+}
+
+watch(isLoading, (newValue) => {
+  console.log('Loading:', newValue)
+})
+
+onMounted(() => {
+  // initialization
+})
+
+defineExpose({
+  validateForm
+})
+```
+
+## Template Logic
+
+### Strict Rules
+- **DO NOT use complex conditions inside HTML**
+- **DO NOT use v-if/v-show with complex logic directly in template**
+- **ALWAYS separate logic into computed functions or methods**
+
+❌ **BAD - Don't do this:**
+```vue
+<template>
+  <div v-if="user && user.isActive && user.role === 'admin' && !user.isBanned">
+    <!-- content -->
+  </div>
+</template>
+```
+
+✅ **GOOD - Do this:**
+```vue
+<script setup lang="ts">
+const canAccessAdminPanel = computed(() => {
+  return user.value && 
+         user.value.isActive && 
+         user.value.role === 'admin' && 
+         !user.value.isBanned
+})
+</script>
+
+<template>
+  <div v-if="canAccessAdminPanel">
+    <!-- content -->
+  </div>
+</template>
+```
+
+### Benefits
+- Better code readability
+- Easier maintenance
+- Better testing
+- Logic reusability
+- Separation of concerns
+
+## Additional Notes
+- Nuxt composable functions are auto-imported (no explicit import needed)
+- Minimize div usage, use simple structures
+- Use flex for components and grid for layouts
+- Avoid comments in HTML section of .vue, .jsx, .erb, .haml files
