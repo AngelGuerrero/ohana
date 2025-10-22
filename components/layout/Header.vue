@@ -6,9 +6,9 @@
       <!-- Logo -->
       <NuxtLink to="/" class="flex-shrink-0">
         <img
-          src="/img/logo.png"
+          src="/img/logo.svg"
           alt="Ohana - Dulces Momentos"
-          class="h-10 md:h-12 w-auto cursor-pointer hover:opacity-90 transition-opacity" />
+          class="h-10 md:h-12 w-auto cursor-pointer" />
       </NuxtLink>
 
       <!-- Desktop Navigation -->
