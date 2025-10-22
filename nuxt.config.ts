@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Ohana - Endulza tus momentos con nuestros postres artesanales, frappés, cafés premium y crepas deliciosas.',
+            'Ohana - Endulza tus momentos con nuestros postres artesanales, frappés, cafés y crepas deliciosas.',
         },
         {
           name: 'keywords',
@@ -42,4 +42,10 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@nuxt/image',
   ],
+
+  fonts: {
+    families: [
+      { name: 'Poppins', provider: 'google', weights: [300, 400, 500, 600, 700, 800] },
+    ],
+  },
 });

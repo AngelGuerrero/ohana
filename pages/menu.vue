@@ -305,7 +305,7 @@
           class="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm text-amber-600/60 font-medium relative z-10">
           <span>✨ Elaborado con pasión</span>
           <span class="text-amber-800/40">•</span>
-          <span>Ingredientes premium</span>
+          <span>Ingredientes de calidad</span>
           <span class="text-amber-800/40">•</span>
           <span>Servicio excepcional</span>
         </div>

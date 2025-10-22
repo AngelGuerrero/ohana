@@ -15,6 +15,10 @@ export default {
         'brand-gold': '#FFD700',
         'brand-dark': '#1a1a1a',
       },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'sans': ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
