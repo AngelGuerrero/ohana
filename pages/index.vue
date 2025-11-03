@@ -3,13 +3,12 @@
     title: 'Ohana - Postres, Frappés & Café',
   });
 
-  const hoveredIndex = ref(-1);
-
   const galleryImages = [
     {
       url: '/img/crepa_platano_nutella.jpg',
       title: 'Crepas Dulces',
-      description: 'Deliciosas crepas con nutella, mermelada, miel o filadelfia',
+      description:
+        'Deliciosas crepas con nutella, mermelada, miel o filadelfia',
     },
     {
       url: '/img/crepa_salada_carnes_frias.jpg',
@@ -41,40 +40,215 @@
 
 <template>
   <div>
-    <section class="relative min-h-dvh flex items-center justify-center overflow-hidden bg-black">
-      <div class="absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-neutral-900 animate-gradient-shift"></div>
+    <section
+      class="relative min-h-dvh flex items-center justify-center overflow-hidden bg-black">
+      <div
+        class="absolute inset-0 bg-gradient-radial from-neutral-800/40 via-black to-black"></div>
 
-      <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-amber-500/30 to-transparent rounded-full blur-3xl animate-parallax-1"></div>
-        <div class="absolute top-40 right-32 w-80 h-80 bg-gradient-to-tl from-amber-600/20 to-transparent rounded-full blur-3xl animate-parallax-2"></div>
-        <div class="absolute bottom-32 left-1/3 w-72 h-72 bg-gradient-to-tr from-amber-400/15 to-transparent rounded-full blur-3xl animate-parallax-3"></div>
-        <div class="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-amber-500/25 to-transparent rounded-full blur-3xl animate-parallax-1" style="animation-delay: -10s;"></div>
+      <svg
+        class="absolute inset-0 w-full h-full"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient
+            id="vert-gradient-1"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%">
+            <stop
+              offset="0%"
+              style="stop-color: rgba(251, 191, 36, 0); stop-opacity: 1" />
+            <stop
+              offset="30%"
+              style="stop-color: rgba(251, 191, 36, 0.15); stop-opacity: 1" />
+            <stop
+              offset="50%"
+              style="stop-color: rgba(251, 191, 36, 0.25); stop-opacity: 1" />
+            <stop
+              offset="70%"
+              style="stop-color: rgba(251, 191, 36, 0.15); stop-opacity: 1" />
+            <stop
+              offset="100%"
+              style="stop-color: rgba(251, 191, 36, 0); stop-opacity: 1" />
+          </linearGradient>
+          <linearGradient
+            id="vert-gradient-2"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%">
+            <stop
+              offset="0%"
+              style="stop-color: rgba(148, 163, 184, 0); stop-opacity: 1" />
+            <stop
+              offset="30%"
+              style="stop-color: rgba(148, 163, 184, 0.1); stop-opacity: 1" />
+            <stop
+              offset="50%"
+              style="stop-color: rgba(148, 163, 184, 0.2); stop-opacity: 1" />
+            <stop
+              offset="70%"
+              style="stop-color: rgba(148, 163, 184, 0.1); stop-opacity: 1" />
+            <stop
+              offset="100%"
+              style="stop-color: rgba(148, 163, 184, 0); stop-opacity: 1" />
+          </linearGradient>
+        </defs>
+
+        <line
+          x1="10%"
+          y1="0"
+          x2="10%"
+          y2="100%"
+          stroke="url(#vert-gradient-2)"
+          stroke-width="1"
+          class="animate-vertical-line"
+          style="animation-delay: 0s" />
+        <line
+          x1="22%"
+          y1="0"
+          x2="22%"
+          y2="100%"
+          stroke="url(#vert-gradient-1)"
+          stroke-width="1.5"
+          class="animate-vertical-line"
+          style="animation-delay: 0.3s" />
+        <line
+          x1="35%"
+          y1="0"
+          x2="35%"
+          y2="100%"
+          stroke="url(#vert-gradient-2)"
+          stroke-width="1"
+          class="animate-vertical-line"
+          style="animation-delay: 0.6s" />
+        <line
+          x1="50%"
+          y1="0"
+          x2="50%"
+          y2="100%"
+          stroke="url(#vert-gradient-1)"
+          stroke-width="2"
+          class="animate-vertical-line"
+          style="animation-delay: 0.9s" />
+        <line
+          x1="65%"
+          y1="0"
+          x2="65%"
+          y2="100%"
+          stroke="url(#vert-gradient-2)"
+          stroke-width="1"
+          class="animate-vertical-line"
+          style="animation-delay: 1.2s" />
+        <line
+          x1="78%"
+          y1="0"
+          x2="78%"
+          y2="100%"
+          stroke="url(#vert-gradient-1)"
+          stroke-width="1.5"
+          class="animate-vertical-line"
+          style="animation-delay: 1.5s" />
+        <line
+          x1="90%"
+          y1="0"
+          x2="90%"
+          y2="100%"
+          stroke="url(#vert-gradient-2)"
+          stroke-width="1"
+          class="animate-vertical-line"
+          style="animation-delay: 1.8s" />
+      </svg>
+
+      <div
+        class="absolute top-8 left-8 text-left opacity-60 animate-fade-slide-in"
+        style="animation-delay: 1.5s">
+        <p
+          class="text-xs md:text-sm text-slate-400 font-light tracking-widest uppercase">
+          Crepas
+        </p>
+        <p class="text-[10px] md:text-xs text-slate-500">Dulces</p>
       </div>
 
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
-        <div class="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent"></div>
+      <div
+        class="absolute top-1/4 right-12 text-right opacity-60 animate-fade-slide-in"
+        style="animation-delay: 1.8s">
+        <p
+          class="text-xs md:text-sm text-amber-400/70 font-light tracking-widest uppercase">
+          Waffles
+        </p>
+        <p class="text-[10px] md:text-xs text-amber-500/50">Crujientes</p>
       </div>
 
-      <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, rgba(251, 191, 36, 0.2) 1px, transparent 0); background-size: 50px 50px;"></div>
+      <div
+        class="absolute bottom-1/4 left-12 text-left opacity-60 animate-fade-slide-in"
+        style="animation-delay: 2.1s">
+        <p
+          class="text-xs md:text-sm text-amber-400/70 font-light tracking-widest uppercase">
+          Frappés
+        </p>
+        <p class="text-[10px] md:text-xs text-amber-500/50">Artesanales</p>
+      </div>
 
-      <div class="relative z-10 flex flex-col items-center justify-center px-4">
+      <div
+        class="absolute bottom-12 right-16 text-right opacity-60 animate-fade-slide-in"
+        style="animation-delay: 2.4s">
+        <p
+          class="text-xs md:text-sm text-slate-400 font-light tracking-widest uppercase">
+          Postres
+        </p>
+        <p class="text-[10px] md:text-xs text-slate-500">Frescos</p>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center px-4 max-w-5xl mx-auto text-center">
         <img
           src="/img/logo.svg"
           alt="Ohana"
-          class="mb-12 h-64 w-auto md:h-80 lg:h-96 animate-logo-entrance" />
+          class="h-48 w-auto md:h-64 lg:h-80 mb-8 animate-logo-entrance" />
+
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-tight leading-tight animate-fade-in-up"
+          style="animation-delay: 0.6s">
+          Postres, Frappés <span class="text-amber-400">&</span> Café
+        </h1>
+
+         <div class="max-w-2xl mb-12">
+           <WordByWordAnimationComponent
+             text="Donde cada creación lleva el amor y la dedicación de nuestra familia"
+             :delay="900"
+             :word-delay="320"
+             base-classes="text-base md:text-lg text-slate-400 font-light leading-relaxed" />
+         </div>
 
         <a
           href="/menu"
-          class="rounded-lg bg-brand-gold px-12 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 animate-button-entrance">
-          Ver Menú
+          class="group relative inline-flex items-center gap-3 px-10 py-4 border border-amber-500/30 hover:border-amber-400/60 rounded-none overflow-hidden transition-all duration-500 animate-fade-in-up"
+          style="animation-delay: 1.2s">
+          <span
+            class="relative text-sm font-normal text-slate-200 tracking-[0.2em] uppercase group-hover:text-white transition-colors duration-300">
+            Ver Menú
+          </span>
+          <svg
+            class="w-4 h-4 text-amber-400 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
       </div>
 
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-amber-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+      <div
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+        <div
+          class="w-px h-12 bg-gradient-to-b from-amber-400/50 to-transparent"></div>
       </div>
     </section>
 
@@ -249,8 +423,18 @@
 
       <div
         class="absolute inset-0 opacity-5"
-        style="background-image: radial-gradient(circle at 25% 25%, rgba(251, 191, 36, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);">
-      </div>
+        style="
+          background-image: radial-gradient(
+              circle at 25% 25%,
+              rgba(251, 191, 36, 0.1) 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              circle at 75% 75%,
+              rgba(245, 158, 11, 0.1) 0%,
+              transparent 50%
+            );
+        "></div>
 
       <div class="container mx-auto max-w-7xl relative z-10">
         <div class="text-center mb-16 md:mb-20">

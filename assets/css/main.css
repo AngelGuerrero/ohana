@@ -749,3 +749,91 @@ img {
   animation: button-entrance 0.8s ease-out 0.6s forwards;
   opacity: 0;
 }
+
+/* ===== ANIMACIONES PARA HERO MINIMALISTA ===== */
+
+/* Gradiente radial para fondo */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
+
+/* Animación de líneas verticales sutiles */
+@keyframes vertical-line {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-vertical-line {
+  animation: vertical-line 5s ease-in-out infinite;
+}
+
+/* Fade in con slide para elementos flotantes */
+@keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in {
+  animation: fade-slide-in 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Fade in up suave para textos centrales */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Bounce suave para indicador de scroll */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+/* Animación palabra por palabra de abajo hacia arriba */
+@keyframes word-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-word-fade-up {
+  animation: word-fade-up 0.6s ease-out forwards;
+  opacity: 0;
+}
