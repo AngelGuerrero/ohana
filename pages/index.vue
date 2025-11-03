@@ -7,44 +7,34 @@
 
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=400&h=400&fit=crop',
-      title: 'Crepa de Nutella',
-      description: 'Crepa francesa rellena de nutella',
+      url: '/img/crepa_platano_nutella.jpg',
+      title: 'Crepas Dulces',
+      description: 'Deliciosas crepas con nutella, mermelada, miel o filadelfia',
     },
     {
-      url: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop',
-      title: 'Waffle Belga',
-      description: 'Waffle crujiente con frutas frescas',
+      url: '/img/crepa_salada_carnes_frias.jpg',
+      title: 'Crepas Saladas',
+      description: 'Crepas con carnes frías y aderezo de habanero',
     },
     {
-      url: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop',
+      url: 'https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=400&h=400&fit=crop',
+      title: 'Waffles',
+      description: 'Waffles crujientes con toppings a elegir',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop',
       title: 'Fresas con Crema',
-      description: 'Fresas frescas con crema batida',
+      description: 'Fresas frescas con nuestra crema especial',
     },
     {
-      url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop',
+      url: '/img/hot_cakes_fresa.jpg',
       title: 'Mini Hotcakes',
-      description: 'Hotcakes esponjosos con miel',
+      description: 'Hotcakes esponjosos servidos por paquetes',
     },
     {
-      url: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=400&fit=crop',
-      title: 'Gomitas Artesanales',
-      description: 'Gomitas con sabores naturales',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop',
-      title: 'Frapé Cremoso',
-      description: 'Bebida fría con café de calidad',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=400&fit=crop',
-      title: 'Toppings Especiales',
-      description: 'Variedad de toppings para personalizar',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=400&fit=crop',
-      title: 'Postres Gourmet',
-      description: 'Deliciosas creaciones artesanales',
+      url: '/img/frappe_mazapan.jpg',
+      title: 'Frapé',
+      description: 'Bebidas frías con sabores variados',
     },
   ];
 </script>

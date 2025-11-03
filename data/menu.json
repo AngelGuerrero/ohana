@@ -19,6 +19,23 @@
       ]
     },
     {
+      "id": "crepas_saladas",
+      "slug": "crepas_saladas",
+      "title": "Crepas Saladas",
+      "active": true,
+      "description": "Crepas saladas con ingredientes selectos.",
+      "flavors": ["Carnes Frías"],
+      "ingredients": ["Pepperoni", "Jamón", "Tocino", "Queso manchego", "Aderezo de habanero"],
+      "variants": [
+        {
+          "id": "regular",
+          "title": "Regular",
+          "price": 95,
+          "active": true
+        }
+      ]
+    },
+    {
       "id": "croissant_relleno",
       "slug": "croissant_relleno",
       "title": "Croissant Relleno",
@@ -82,7 +99,7 @@
       "id": "topping_extra",
       "slug": "topping_extra",
       "title": "Topping Extra",
-      "active": true,
+      "active": false,
       "description": "Costo adicional por cada topping extra.",
       "flavors": ["Nuez", "Chispas de chocolate", "Lunetas", "Chispas de colores"],
       "variants": [
@@ -98,7 +115,7 @@
       "id": "gomiboing",
       "slug": "gomiboing",
       "title": "Gomiboing",
-      "active": true,
+      "active": false,
       "description": "Postre de gomas.",
       "flavors": ["Uva", "Mango", "Fresa"],
       "variants": [

@@ -98,7 +98,7 @@
               <div
                 class="relative bg-gradient-to-br from-neutral-800/40 to-neutral-900/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-900/30">
                 <img
-                  src="/img/crepa_1.jpg"
+                  src="/img/crepa_platano_nutella.jpg"
                   alt="Menú Ohana"
                   class="rounded-2xl shadow-xl w-full h-auto object-cover ring-2 ring-amber-600/30" />
                 <div
@@ -120,6 +120,69 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 relative z-10">
+      <div
+        class="max-w-6xl mx-auto bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-600/10 rounded-2xl border border-amber-500/30 overflow-hidden shadow-lg shadow-amber-900/20">
+        <div class="!flex flex-col md:flex-row items-center gap-6 p-6 md:p-8">
+          <div class="!flex items-center gap-4 shrink-0">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl !flex items-center justify-center shadow-lg">
+              <svg
+                class="w-8 h-8 text-neutral-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-200">
+                Extras y Complementos
+              </h3>
+              <p class="text-sm text-neutral-400">
+                Agrega a cualquier producto
+              </p>
+            </div>
+          </div>
+
+          <div class="!flex flex-1 flex-wrap items-center gap-3">
+            <span
+              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
+              <span class="text-amber-400">•</span>
+              Nuez
+            </span>
+            <span
+              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
+              <span class="text-amber-400">•</span>
+              Chispas de chocolate
+            </span>
+            <span
+              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
+              <span class="text-amber-400">•</span>
+              Lunetas
+            </span>
+            <span
+              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
+              <span class="text-amber-400">•</span>
+              Chispas de colores
+            </span>
+          </div>
+
+          <div class="shrink-0 text-center md:text-right">
+            <div class="text-xs text-amber-400 font-semibold uppercase mb-1">
+              Precio
+            </div>
+            <div class="text-3xl font-bold text-amber-200">$10</div>
+            <div class="text-xs text-neutral-400">por porción</div>
           </div>
         </div>
       </div>
@@ -177,8 +240,13 @@
                 class="bg-neutral-950/50 rounded-xl overflow-hidden min-h-[250px] flex items-center justify-center border border-amber-900/20 shadow-inner">
                 <img
                   v-if="item.id === 'crepas'"
-                  src="/img/crepa_1.jpg"
+                  src="/img/crepa_platano_nutella.jpg"
                   alt="Crepas"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img
+                  v-else-if="item.id === 'crepas_saladas'"
+                  src="/img/crepa_salada_carnes_frias.jpg"
+                  alt="Crepas Saladas"
                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 <img
                   v-else-if="item.id === 'croissant_relleno'"
@@ -189,6 +257,21 @@
                   v-else-if="item.id === 'frapes'"
                   src="/img/frappe_mazapan.jpg"
                   alt="Frapés"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img
+                  v-else-if="item.id === 'mini_hotcakes'"
+                  src="/img/hot_cakes_fresa.jpg"
+                  alt="Mini Hotcakes"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img
+                  v-else-if="item.id === 'fresas_con_crema'"
+                  src="/img/fresas_con_crema.png"
+                  alt="Fresas con Crema"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img
+                  v-else-if="item.id === 'waffles'"
+                  src="/img/waffles.png"
+                  alt="Waffles"
                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 <div v-else class="text-center p-4">
                   <div

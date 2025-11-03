@@ -168,6 +168,32 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Ingredients Section (if available) -->
+              <div
+                v-if="item.ingredients && item.ingredients.length > 0"
+                class="mb-4 relative z-10"
+              >
+                <h4
+                  class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3"
+                >
+                  Ingredientes
+                </h4>
+                <div class="space-y-2">
+                  <div
+                    v-for="ingredient in item.ingredients"
+                    :key="ingredient"
+                    class="flex items-center gap-2"
+                  >
+                    <div
+                      class="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0"
+                    ></div>
+                    <span class="text-sm text-gray-300 leading-relaxed">
+                      {{ ingredient }}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Variants Section -->
