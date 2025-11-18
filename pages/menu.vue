@@ -1,5 +1,29 @@
 <script setup lang="ts">
   import menuData from '~/data/menu.json';
+  useHead({
+    title: 'Menú | Ohana',
+    meta: [
+      {
+        name: 'description',
+        content:
+          'Menú de Ohana: crepas artesanales, postres, croissants, waffles y bebidas especiales.',
+      },
+      { property: 'og:title', content: 'Menú | Ohana' },
+      {
+        property: 'og:description',
+        content:
+          'Descubre nuestras crepas, postres y bebidas elaboradas con ingredientes de calidad.',
+      },
+      { property: 'og:image', content: '/img/store_front.jpg' },
+      { name: 'twitter:title', content: 'Menú | Ohana' },
+      {
+        name: 'twitter:description',
+        content:
+          'Descubre nuestras crepas, postres y bebidas elaboradas con ingredientes de calidad.',
+      },
+      { name: 'twitter:image', content: '/img/store_front.jpg' },
+    ],
+  });
 
   const menuItems = menuData.items.filter((item) => item.active);
 
@@ -17,7 +41,7 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-neutral-900">
+  <div class="menu-page min-h-screen bg-neutral-900">
     <div
       class="relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-amber-950 py-20 md:py-32">
       <div
@@ -52,6 +76,16 @@
             </p>
 
             <div class="!flex flex-wrap items-center gap-4 mb-12">
+              <button
+                type="button"
+                class="print:hidden !flex items-center gap-2 px-6 py-3 bg-neutral-800 text-amber-200 rounded-full font-semibold border border-amber-600/30 hover:bg-neutral-700 transition-all"
+                @click="window.print()"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v6H6v-6z" />
+                </svg>
+                Imprimir menú
+              </button>
               <a
                 href="https://www.facebook.com/profile.php?id=61552845366116"
                 target="_blank"

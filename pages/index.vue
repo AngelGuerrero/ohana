@@ -565,7 +565,7 @@
               </div>
               <div>
                 <h3 class="text-xl font-bold text-amber-400 mb-2">Ubicación</h3>
-                <p class="text-neutral-300">Ajusco 318, Loma Bonita</p>
+                <p class="text-neutral-300">Calle Corregidora 168, Centro histórico</p>
                 <p class="text-neutral-300">Querétaro, Qro.</p>
               </div>
             </div>
