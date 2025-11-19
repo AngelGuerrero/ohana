@@ -76,16 +76,6 @@
             </p>
 
             <div class="!flex flex-wrap items-center gap-4 mb-12">
-              <button
-                type="button"
-                class="print:hidden !flex items-center gap-2 px-6 py-3 bg-neutral-800 text-amber-200 rounded-full font-semibold border border-amber-600/30 hover:bg-neutral-700 transition-all"
-                @click="window.print()"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v6H6v-6z" />
-                </svg>
-                Imprimir menú
-              </button>
               <a
                 href="https://www.facebook.com/profile.php?id=61552845366116"
                 target="_blank"
@@ -162,10 +152,10 @@
     <div class="container mx-auto px-4 py-8 relative z-10">
       <div
         class="max-w-6xl mx-auto bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-600/10 rounded-2xl border border-amber-500/30 overflow-hidden shadow-lg shadow-amber-900/20">
-        <div class="!flex flex-col md:flex-row items-center gap-6 p-6 md:p-8">
-          <div class="!flex items-center gap-4 shrink-0">
+        <div class="flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6 p-6 md:p-8 w-full">
+          <div class="flex items-center gap-4">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl !flex items-center justify-center shadow-lg">
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
               <svg
                 class="w-8 h-8 text-neutral-900"
                 fill="none"
@@ -187,31 +177,7 @@
               </p>
             </div>
           </div>
-
-          <div class="!flex flex-1 flex-wrap items-center gap-3">
-            <span
-              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
-              <span class="text-amber-400">•</span>
-              Nuez
-            </span>
-            <span
-              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
-              <span class="text-amber-400">•</span>
-              Chispas de chocolate
-            </span>
-            <span
-              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
-              <span class="text-amber-400">•</span>
-              Lunetas
-            </span>
-            <span
-              class="px-4 py-2 bg-gradient-to-br from-neutral-800 to-neutral-900 text-amber-200 border border-amber-600/30 rounded-lg text-sm font-medium !flex items-center gap-2">
-              <span class="text-amber-400">•</span>
-              Chispas de colores
-            </span>
-          </div>
-
-          <div class="shrink-0 text-center md:text-right">
+          <div class="flex flex-col items-end md:items-end text-right">
             <div class="text-xs text-amber-400 font-semibold uppercase mb-1">
               Precio
             </div>
