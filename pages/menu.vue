@@ -205,16 +205,12 @@
               class="px-6 md:px-8 py-6 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 relative overflow-hidden">
               <div
                 class="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-50"></div>
-              <div class="flex justify-between items-start gap-4 relative z-10">
-                <div>
+              <div class="flex justify-between items-center gap-4 relative z-10">
+                <div class="flex-1">
                   <h3
                     class="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
                     {{ item.title }}
                   </h3>
-                  <p
-                    class="text-neutral-800 text-sm md:text-base leading-relaxed">
-                    {{ item.description }}
-                  </p>
                 </div>
                 <div class="text-right shrink-0">
                   <div
@@ -296,11 +292,17 @@
               </div>
 
               <div class="space-y-5">
+                <div v-if="item.description && item.description.length > 0">
+                  <p class="text-neutral-300 text-sm md:text-base leading-relaxed">
+                    {{ item.description }}
+                  </p>
+                </div>
+
                 <div v-if="item.flavors && item.flavors.length > 0">
                   <h4
                     class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <span class="w-1 h-4 bg-amber-400 rounded-full"></span>
-                    Sabores disponibles
+                    Sabores
                   </h4>
                   <div class="flex flex-wrap gap-2">
                     <span

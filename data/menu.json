@@ -6,9 +6,17 @@
       "slug": "crepas",
       "title": "Crepas",
       "active": true,
-      "description": "Deliciosas crepas dulces.",
-      "flavors": ["Nutella", "Mermelada", "Miel", "Filadelfia"],
-      "fruits": ["Fresas", "Durazno", "Plátano"],
+      "description": "",
+      "flavors": [
+        "Nutella",
+        "Mermelada",
+        "Filadelfia"
+      ],
+      "fruits": [
+        "Fresas",
+        "Durazno",
+        "Plátano"
+      ],
       "variants": [
         {
           "id": "regular",
@@ -23,9 +31,17 @@
       "slug": "crepas_saladas",
       "title": "Crepas Saladas",
       "active": true,
-      "description": "Crepas saladas con ingredientes selectos.",
-      "flavors": ["Carnes Frías"],
-      "ingredients": ["Pepperoni", "Jamón", "Tocino", "Queso manchego", "Aderezo de habanero"],
+      "description": "",
+      "flavors": [
+        "Carnes Frías"
+      ],
+      "ingredients": [
+        "Pepperoni",
+        "Jamón",
+        "Tocino",
+        "Queso manchego",
+        "Aderezo de habanero"
+      ],
       "variants": [
         {
           "id": "regular",
@@ -40,8 +56,11 @@
       "slug": "croissant_relleno",
       "title": "Croissant Relleno",
       "active": true,
-      "description": "Croissant artesanal recién horneado con deliciosos rellenos.",
-      "flavors": ["Nutella", "Mermelada"],
+      "description": "",
+      "flavors": [
+        "Nutella",
+        "Mermelada"
+      ],
       "variants": [
         {
           "id": "regular",
@@ -54,10 +73,15 @@
     {
       "id": "frapes",
       "slug": "frapes",
-      "title": "Frapés",
+      "title": "Frappés",
       "active": true,
-      "description": "Bebidas frías a base de hielo y saborizantes.",
-      "flavors": ["Café", "Mazapán", "Galleta Oreo", "Gansito"],
+      "description": "",
+      "flavors": [
+        "Café",
+        "Mazapán",
+        "Galleta Oreo",
+        "Gansito"
+      ],
       "variants": [
         {
           "id": "regular",
@@ -72,8 +96,14 @@
       "slug": "mini_hotcakes",
       "title": "Mini Hotcakes",
       "active": true,
-      "description": "Mini Hotcakes por paquetes.",
-      "flavors": ["Nutella", "Mermelada", "Lechera", "Cajeta", "Filadelfia"],
+      "description": "",
+      "flavors": [
+        "Nutella",
+        "Mermelada",
+        "Lechera",
+        "Cajeta",
+        "Filadelfia"
+      ],
       "variants": [
         {
           "id": "paquete_de_8",
@@ -101,7 +131,12 @@
       "title": "Topping Extra",
       "active": false,
       "description": "Costo adicional por cada topping extra.",
-      "flavors": ["Nuez", "Chispas de chocolate", "Lunetas", "Chispas de colores"],
+      "flavors": [
+        "Nuez",
+        "Chispas de chocolate",
+        "Lunetas",
+        "Chispas de colores"
+      ],
       "variants": [
         {
           "id": "porcion",
@@ -116,8 +151,12 @@
       "slug": "gomiboing",
       "title": "Gomiboing",
       "active": false,
-      "description": "Postre de gomas.",
-      "flavors": ["Uva", "Mango", "Fresa"],
+      "description": "",
+      "flavors": [
+        "Uva",
+        "Mango",
+        "Fresa"
+      ],
       "variants": [
         {
           "id": "pequeno",
@@ -138,8 +177,12 @@
       "slug": "lechitas_preparadas",
       "title": "Lechitas Preparadas",
       "active": false,
-      "description": "Leche preparada con sabores.",
-      "flavors": ["Vainilla", "Chocolate", "Fresa"],
+      "description": "",
+      "flavors": [
+        "Vainilla",
+        "Chocolate",
+        "Fresa"
+      ],
       "variants": [
         {
           "id": "regular",
@@ -154,19 +197,12 @@
       "slug": "fresas_con_crema",
       "title": "Fresas con Crema",
       "active": true,
-      "description": "Fresas frescas con nuestra crema especial.",
-      "flavors": ["Clásicas", "Con chocolate", "Con nueces"],
+      "description": "Fresas con crema, en el borde chocolate Nutella y en la punta crema batida, acompañadas con un topping de tu preferencia",
       "variants": [
         {
-          "id": "vaso_pequeno",
-          "title": "Vaso pequeño",
-          "price": 35,
-          "active": true
-        },
-        {
-          "id": "vaso_grande",
-          "title": "Vaso grande",
-          "price": 45,
+          "id": "regular",
+          "title": "Regular",
+          "price": 40,
           "active": true
         }
       ]
@@ -176,8 +212,13 @@
       "slug": "waffles",
       "title": "Waffles",
       "active": true,
-      "description": "Waffles recién hechos con el topping de tu elección.",
-      "flavors": ["Nutella", "Cajeta", "Mermelada", "Filadelfia"],
+      "description": "",
+      "flavors": [
+        "Nutella",
+        "Cajeta",
+        "Mermelada",
+        "Filadelfia"
+      ],
       "variants": [
         {
           "id": "regular",
